@@ -29,7 +29,7 @@ core boundaries or external shielding structures.
 
 **Competition task.** Reconstruct the spatially resolved, multi-field
 state of the reactor core given only sparse point measurements of a
-**single** observable field. This setting is fundamentally different
+single observable field. This setting is fundamentally different
 from standard time-series forecasting and has no analogue in existing
 ML benchmarks. The first challenge in the CTF4Nuclear series targets
 the Molten Salt Fast Reactor: five coupled fields — prompt fission

@@ -3,23 +3,6 @@
 
 @import "{{ site.theme }}";
 
-/* ---- Hero: replace the H1 title text with the CTF4Science logo ---- */
-.page-header .project-name {
-  /* Hide the text but keep semantic h1 */
-  font-size: 0;
-  line-height: 0;
-  color: transparent;
-
-  background-image: url('../ctf4science-logo-light.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
-  height: 110px;
-  max-width: 520px;
-  margin: 0 auto 0.5rem auto;
-}
-
 /* ---- Lead paragraph just below the hero ---- */
 .main-content p.lead {
   font-size: 1.12rem;

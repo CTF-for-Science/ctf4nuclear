@@ -14,26 +14,56 @@ CTF4Nuclear is a NeurIPS 2026 competition for evaluating machine-learning surrog
 <a href="https://github.com/CTF-for-Science/ctf4science"><code>ctf4science</code> package</a>
 </div>
 
-## What you'll be modelling
+## The challenge
 
-Five physical fields — prompt fission power, decay heat, temperature,
-axial velocity, and vertical velocity — on a 3 880-node mesh, sampled
-every 0.05 s. Nine evaluation pairs produce twelve normalised scores
-**E1–E12**, aggregated into a single composite **AvgScore**. As of
-proposal time, the current published leader is *PyKoopman* at
-**AvgScore = 70.97**; the strongest deterministic baseline
-(*Baseline Last* — repeat the last training state across the forecast
-horizon) sits at **62.67**.
+Nuclear fission and fusion reactors are among the most safety-critical
+dynamical systems ever engineered. Their safe operation demands
+continuous, real-time knowledge of the full multi-physics state of the
+reactor core — neutron flux distributions, fuel and coolant
+temperatures, coolant velocity fields, and delayed-neutron precursor
+concentrations. In next-generation reactor concepts — Generation-IV
+fission designs such as molten salt reactors and micro-reactors, and
+magnetic-confinement fusion devices — extreme environments make in-core
+instrumentation nearly impossible: sensors are physically confined to
+core boundaries or external shielding structures.
 
-## Competition phases
+**Competition task.** Reconstruct the spatially resolved, multi-field
+state of the reactor core given only sparse point measurements of a
+**single** observable field. This setting is fundamentally different
+from standard time-series forecasting and has no analogue in existing
+ML benchmarks. The first challenge in the CTF4Nuclear series targets
+the Molten Salt Fast Reactor: five coupled fields — prompt fission
+power, decay heat, temperature, and two velocity components — on a
+3 880-node mesh, evaluated across twelve experiments that probe
+short- and long-time forecasting, denoising, limited-data, and
+parametric generalisation. The current published leader (*PyKoopman*)
+reaches **AvgScore = 70.97**; the strongest deterministic baseline
+(*Baseline Last*) sits at **62.67**.
 
-1. **Development phase.** Public leaderboard accepts submissions; per-experiment scores E1–E12 and the composite *AvgScore* are visible to all participants in real time.
-2. **Mid-competition mini-talks.** Top participants present their approaches in an open session.
-3. **Final phase.** Public submissions close. Each team's highest-scoring submission is re-evaluated on organiser hardware against a held-out parametric regime.
-4. **Winners announced.** Private re-evaluation produces the official final rankings; winners are notified and prizes awarded.
-5. **NeurIPS Competition Workshop.** Winning teams present at the workshop and contribute write-ups to the PMLR proceedings volume.
+**Why it matters.** Digital twins capable of real-time state estimation
+from sparse sensors are a prerequisite for autonomous reactor control,
+predictive maintenance, and rapid accident prognosis. The IAEA has
+identified AI-enabled digital twins as a strategic priority for nuclear
+safety, and the OECD Nuclear Energy Agency has called for standardised
+ML benchmarks in this domain. The underlying inverse problem —
+recovering a high-dimensional multi-physics state from partial,
+indirect observations — also arises in climate modelling, industrial
+process control, and biomedical monitoring, making algorithmic
+advances broadly transferable.
 
-Exact dates will be announced at competition launch on this page and on the leaderboard Space.
+## Tentative timeline
+
+The launch date and the NeurIPS Competition Workshop date are fixed.
+All other dates below are tentative and will be finalised at competition
+launch.
+
+| Date | Milestone |
+|---|---|
+| **23 June 2026** | Competition opens — public leaderboard accepts submissions |
+| August 2026 | Mid-competition mini-talks (top participants present their approaches) |
+| Mid-October 2026 | Public leaderboard closes; final phase begins (top submissions re-evaluated on organiser hardware against a held-out parametric regime) |
+| November 2026 | Winners announced; PMLR proceedings write-ups invited |
+| **11–12 December 2026** | NeurIPS Competition Workshop, San Diego |
 
 ## How to participate
 
@@ -47,7 +77,7 @@ Exact dates will be announced at competition launch on this page and on the lead
 6. Submit via the **Submit** tab on the leaderboard — scores appear within minutes.
 
 The starter notebook completes steps 2–6 end-to-end in under ten minutes
-on a free Colab CPU instance. No GPU is required at any point.
+on a free Colab CPU instance.
 
 ## Rules
 
@@ -64,13 +94,16 @@ before competition launch.
 
 ## Frequently asked questions
 
-**Who can participate?** Anyone with a Hugging Face account, subject to
-the eligibility terms in the official rules.
+**Who can participate?** Anyone with a Hugging Face account.
 
-**Do I need a GPU?** No. Submissions are prediction files, not training
-code; you only need enough compute to fit your own model. The reference
+**Do I need a GPU?** Not necessarily. Submissions are prediction files,
+not training code, so the leaderboard scoring itself runs entirely on
+Hugging Face compute — no GPU is required from you to submit. Most
+deep-learning approaches will still need a GPU to *train* your model;
+classical and operator-theoretic methods often do not. The reference
 [*Baseline Last*](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
-runs in under ten minutes on a free Colab CPU instance.
+is pure NumPy and runs in under ten minutes on a free Colab CPU
+instance.
 
 **Where is the training data?** Public mirror at
 [`huggingface.co/datasets/ctf4science/ctf4nuclear-msfr`](https://huggingface.co/datasets/ctf4science/ctf4nuclear-msfr).

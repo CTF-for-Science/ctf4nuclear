@@ -59,11 +59,11 @@ launch.
 
 | Date | Milestone |
 |---|---|
-| **23 June 2026** | Competition opens — public leaderboard accepts submissions |
+| **June 2026** | Competition opens — public leaderboard accepts submissions |
 | August 2026 | Mid-competition mini-talks (top participants present their approaches) |
 | Mid-October 2026 | Public leaderboard closes; final phase begins (top submissions re-evaluated on organiser hardware against a held-out parametric regime) |
 | November 2026 | Winners announced; PMLR proceedings write-ups invited |
-| **11–12 December 2026** | NeurIPS Competition Workshop, San Diego |
+| **11–12 December 2026** | NeurIPS Competition Workshop, Sydney |
 
 ## How to participate
 
@@ -76,8 +76,9 @@ launch.
 5. Push the Parquet to your own public Hugging Face dataset repository.
 6. Submit via the **Submit** tab on the leaderboard — scores appear within minutes.
 
-The starter notebook completes steps 2–6 end-to-end in under ten minutes
-on a free Colab CPU instance.
+The [starter notebook](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
+completes steps 2–6 end-to-end in under ten minutes on a free Colab CPU
+instance.
 
 ## Rules
 
@@ -97,10 +98,10 @@ before competition launch.
 **Who can participate?** Anyone with a Hugging Face account.
 
 **Do I need a GPU?** Not necessarily. Submissions are prediction files,
-not training code, so the leaderboard scoring itself runs entirely on
-Hugging Face compute — no GPU is required from you to submit. Most
-deep-learning approaches will still need a GPU to *train* your model;
-classical and operator-theoretic methods often do not. The reference
+not training code, and the leaderboard scoring itself runs entirely on
+Hugging Face compute — no resources are required from you to submit.
+However, most deep-learning approaches will still need a GPU to train
+your model. The reference
 [*Baseline Last*](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
 is pure NumPy and runs in under ten minutes on a free Colab CPU
 instance.

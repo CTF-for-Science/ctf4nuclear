@@ -4,7 +4,7 @@ layout: default
 ---
 
 <p class="lead">
-CTF4Nuclear is a NeurIPS 2026 competition for evaluating machine-learning surrogates of nuclear-reactor multiphysics simulations. The first challenge in the series scores models on the <strong>Molten Salt Fast Reactor (MSFR)</strong> — a Generation-IV reactor concept whose liquid-fuel design couples neutronics, thermal-hydraulics, and salt transport in ways that make full-physics simulations expensive. Models are evaluated on twelve standardised experiments covering short- and long-time forecasting, denoising, limited-data, and parametric generalisation; the public leaderboard runs continuously on Hugging Face compute.
+CTF4Nuclear is a NeurIPS 2026 competition for evaluating machine-learning surrogates of nuclear-reactor multiphysics simulations. The first challenge in the series scores models on the <strong>Molten Salt Fast Reactor (MSFR)</strong> — a Generation-IV reactor concept whose liquid-fuel design couples neutronics, thermal-hydraulics, and salt transport in ways that make full-physics simulations expensive. Models are evaluated on twelve standardised experiments covering short- and long-time forecasting, denoising, limited-data, and parametric generalisation; the public [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) runs continuously on Hugging Face compute.
 </p>
 
 <div class="button-row">
@@ -36,9 +36,7 @@ the Molten Salt Fast Reactor: five coupled fields — prompt fission
 power, decay heat, temperature, and two velocity components — on a
 3 880-node mesh, evaluated across twelve experiments that probe
 short- and long-time forecasting, denoising, limited-data, and
-parametric generalisation. The current published leader (*PyKoopman*)
-reaches **AvgScore = 70.97**; the strongest deterministic baseline
-(*Baseline Last*) sits at **62.67**.
+parametric generalisation.
 
 **Why it matters.** Digital twins capable of real-time state estimation
 from sparse sensors are a prerequisite for autonomous reactor control,
@@ -59,9 +57,9 @@ launch.
 
 | Date | Milestone |
 |---|---|
-| **June 2026** | Competition opens — public leaderboard accepts submissions |
+| **June 2026** | Competition opens — public [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) accepts submissions |
 | August 2026 | Mid-competition mini-talks (top participants present their approaches) |
-| Mid-October 2026 | Public leaderboard closes; final phase begins (top submissions re-evaluated on organiser hardware against a held-out parametric regime) |
+| Mid-October 2026 | Public [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) closes; final phase begins (top submissions re-evaluated on organiser hardware against a held-out parametric regime) |
 | November 2026 | Winners announced; PMLR proceedings write-ups invited |
 | **11–12 December 2026** | NeurIPS Competition Workshop, Sydney |
 
@@ -74,7 +72,7 @@ launch.
    [starter notebook](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
    to get a working *Baseline Last* submission).
 5. Push the Parquet to your own public Hugging Face dataset repository.
-6. Submit via the **Submit** tab on the leaderboard — scores appear within minutes.
+6. Submit via the **Submit** tab on the [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) — scores appear within minutes.
 
 The [starter notebook](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
 completes steps 2–6 end-to-end in under ten minutes on a free Colab CPU
@@ -90,7 +88,7 @@ competition-track proceedings volume.
 Full official rules — including submission caps, allowed external data
 and tools, and the final re-evaluation procedure — will be published on
 the
-[leaderboard Space](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard)
+[Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard)
 before competition launch.
 
 ## Frequently asked questions
@@ -98,7 +96,7 @@ before competition launch.
 **Who can participate?** Anyone with a Hugging Face account.
 
 **Do I need a GPU?** Not necessarily. Submissions are prediction files,
-not training code, and the leaderboard scoring itself runs entirely on
+not training code, and the [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) scoring runs entirely on
 Hugging Face compute — no resources are required from you to submit.
 However, most deep-learning approaches will still need a GPU to train
 your model. The reference
@@ -113,7 +111,7 @@ Backup tarball at [OSF](https://osf.io/6rzhm/).
 **What format is the submission?** A single Parquet file with 9 500 rows
 and columns `id, pair_id, timestep, f1, …, f19400`. Schema and
 per-pair row layout: see the **Submission Format** tab on the
-leaderboard Space.
+[Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard).
 
 **How is my score computed?** Twelve metrics across forecasting,
 denoising, and parametric generalisation, each clipped to
@@ -134,7 +132,7 @@ publication.
 
 **Where can I ask questions?** Use the
 [Community tab](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/discussions)
-on the leaderboard Space. For email, write to
+on the [Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard). For email, write to
 [alexeyy@uw.edu](mailto:alexeyy@uw.edu) for technical questions
 (submission, scoring, data) or to
 [kutz@uw.edu](mailto:kutz@uw.edu) for general questions about the
@@ -144,6 +142,7 @@ competition.
 
 <div class="sponsor-banners">
 <a href="https://dynamicsai.org/"><img class="ai-institute" src="assets/ai-institute-banner.png" alt="AI Institute in Dynamic Systems"></a>
+<a href="https://huggingscience.co/"><img class="huggingscience" src="assets/huggingscience-logo.svg" alt="Hugging Science"></a>
 <a href="https://huggingface.co/"><img class="huggingface" src="assets/huggingface-logo.svg" alt="Hugging Face"></a>
 </div>
 
@@ -153,6 +152,7 @@ co-organisers across the University of Washington, Columbia University,
 Politecnico di Milano, MIT, American University of Beirut, University
 of Cambridge, Autodesk Research, Distyl AI, and SURF; the full
 organising team is listed in the companion paper.
-**Hugging Face** sponsors all submission-evaluation compute and hosts
-the public leaderboard.
+[Hugging Face](https://huggingscience.co/) sponsors all
+submission-evaluation compute and hosts the public
+[Hugging Face leaderboard](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard).
 

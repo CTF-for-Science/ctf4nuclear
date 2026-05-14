@@ -3,7 +3,7 @@ title: CTF4Nuclear MSFR
 layout: default
 ---
 
-# A NeurIPS 2026 benchmark for nuclear scientific ML
+# A NeurIPS 2026 competition for nuclear scientific ML
 
 CTF4Nuclear is a Common Task Framework for evaluating machine-learning
 surrogates of nuclear-reactor multiphysics simulations. The first
@@ -31,16 +31,15 @@ proposal time, the current published leader is *PyKoopman* at
 (*Baseline Last* — repeat the last training state across the forecast
 horizon) sits at **62.67**.
 
-## Timeline
+## Competition phases
 
-| Date | Milestone |
-|---|---|
-| 16 June 2026 | Competition opens — public leaderboard accepts submissions |
-| 1 August 2026 | Mid-competition mini-talks (top participants present) |
-| 17 October 2026 | Public leaderboard closes; final-phase begins |
-| 24 October 2026 | Final-phase submissions close; private re-evaluation begins |
-| Late November 2026 | Winners announced |
-| 11–12 December 2026 | NeurIPS Competition Workshop, San Diego |
+1. **Development phase.** Public leaderboard accepts submissions; per-experiment scores E1–E12 and the composite *AvgScore* are visible to all participants in real time.
+2. **Mid-competition mini-talks.** Top participants present their approaches in an open session.
+3. **Final phase.** Public submissions close. Each team's highest-scoring submission is re-evaluated on organiser hardware against a held-out parametric regime.
+4. **Winners announced.** Private re-evaluation produces the official final rankings; winners are notified and prizes awarded.
+5. **NeurIPS Competition Workshop.** Winning teams present at the workshop and contribute write-ups to the PMLR proceedings volume.
+
+Exact dates will be announced at competition launch on this page and on the leaderboard Space.
 
 ## How to participate
 
@@ -56,37 +55,28 @@ horizon) sits at **62.67**.
 The starter notebook completes steps 2–6 end-to-end in under ten minutes
 on a free Colab CPU instance. No GPU is required at any point.
 
-## Prizes
+## Rules
 
-- **1st place:** \$500
-- **2nd place:** \$300
-- **3rd place:** \$200
+The competition rules are tentative and still being finalised. Winning
+entries are released under an OSI-approved open-source license, and
+winning teams are invited to contribute a short write-up to the PMLR
+competition-track proceedings volume.
 
-All winning entries are released under an OSI-approved open-source
-license. Winning teams are also invited to contribute a short write-up
-to the PMLR competition-track proceedings volume.
-
-## Rules at a glance
-
-- Maximum team size: **5**.
-- Up to **5 submissions per day**; up to **2 final submissions** selected for ranking.
-- **No external training data** and **no pre-trained models**.
-- Same model across all metrics in a single submission (no per-metric tuning).
-- LLMs are permitted as a development tool.
-- The **top 10** finishers on the public leaderboard are re-evaluated on organiser hardware against a held-out parametric regime; the private re-evaluation produces the official final rankings.
-
-Full official rules and prize terms: see the
-[**Rules** tab on the leaderboard Space](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard).
+Full official rules — including submission caps, allowed external data
+and tools, and the final re-evaluation procedure — will be published on
+the
+[leaderboard Space](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard)
+before competition launch.
 
 ## Frequently asked questions
 
 **Who can participate?** Anyone with a Hugging Face account, subject to
-the eligibility rules. Employees of the Competition Sponsor and Hugging
-Face may compete but are not eligible to win prizes.
+the eligibility terms in the official rules.
 
 **Do I need a GPU?** No. Submissions are prediction files, not training
 code; you only need enough compute to fit your own model. The reference
-*Baseline Last* runs in under ten minutes on a free Colab CPU instance.
+[*Baseline Last*](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb)
+runs in under ten minutes on a free Colab CPU instance.
 
 **Where is the training data?** Public mirror at
 [`huggingface.co/datasets/ctf4science/ctf4nuclear-msfr`](https://huggingface.co/datasets/ctf4science/ctf4nuclear-msfr).
@@ -102,16 +92,12 @@ denoising, and parametric generalisation, each clipped to
 [−100, 100], averaged into *AvgScore*. Formal definitions:
 [ctf4science documentation](https://ctf-for-science.github.io/ctf4science/).
 
-**Can I submit multiple times?** Yes — up to five per day. Pick up to
-two for final ranking.
+**Can I submit multiple times?** Yes — the per-day and final-submission
+limits will be set in the official rules published before launch.
 
 **Is there a private leaderboard?** Yes. After the public phase closes,
-the top ten by public *AvgScore* are re-evaluated on organiser hardware
-against a held-out parametric regime; the private scores are the
-official final rankings.
-
-**Will the test data ever be released?** Yes, after the competition
-concludes, to support reproducible follow-up research.
+top finishers are re-evaluated on organiser hardware against a held-out
+parametric regime; the private scores are the official final rankings.
 
 **How do I cite this benchmark?** A reference paper *"CTF4Nuclear: A
 Common Task Framework for Nuclear Fission and Fusion Models"* is
@@ -120,18 +106,18 @@ publication.
 
 **Where can I ask questions?** Use the
 [Community tab](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/discussions)
-on the leaderboard Space, or email
-`ctf4nuclear@[INSTITUTION]` (forthcoming).
+on the leaderboard Space. For email, write to
+[alexeyy@uw.edu](mailto:alexeyy@uw.edu) for technical questions
+(submission, scoring, data) or to
+[kutz@uw.edu](mailto:kutz@uw.edu) for general questions about the
+competition.
 
 ## Organisers
 
-This benchmark is led by the
+This competition is led by the
 [AI Institute in Dynamic Systems](https://dynamicsai.org/), with
 co-organisers across the University of Washington, Columbia University,
 Politecnico di Milano, MIT, American University of Beirut, University
 of Cambridge, Autodesk Research, Distyl AI, and SURF. The full
 organising team is listed in the companion paper.
 
----
-
-_Last updated: May 2026._

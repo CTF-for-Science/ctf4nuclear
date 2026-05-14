@@ -1,5 +1,5 @@
 title: CTF4Nuclear MSFR
-description: NeurIPS 2026 benchmark for ML surrogate models of Molten Salt Fast Reactor multiphysics simulations.
+description: NeurIPS 2026 competition for ML surrogate models of Molten Salt Fast Reactor multiphysics simulations.
 theme: jekyll-theme-cayman
 url: https://ctf-for-science.github.io
 baseurl: /ctf4nuclear

@@ -1,0 +1,75 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ---- Hero: replace the H1 title text with the CTF4Science logo ---- */
+.page-header .project-name {
+  /* Hide the text but keep semantic h1 */
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+
+  background-image: url('../ctf4science-logo-light.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  height: 110px;
+  max-width: 520px;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* ---- Lead paragraph just below the hero ---- */
+.main-content p.lead {
+  font-size: 1.12rem;
+  color: #424b54;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Button row (the prominent links) ---- */
+.main-content .button-row {
+  margin: 1.25rem 0 2.5rem 0;
+}
+.main-content .button-row a {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  margin: 0.3rem 0.4rem 0.3rem 0;
+  background: linear-gradient(120deg, #155799, #159957);
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  border: none;
+  transition: filter 0.15s ease;
+}
+.main-content .button-row a:hover {
+  filter: brightness(1.1);
+  text-decoration: none !important;
+}
+
+/* ---- Sponsor / acknowledgment row at the bottom ---- */
+.main-content .sponsor-banners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+}
+.main-content .sponsor-banners a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-content .sponsor-banners img {
+  max-height: 70px;
+  object-fit: contain;
+  display: block;
+}
+.main-content .sponsor-banners .ai-institute {
+  max-width: 340px;
+}
+.main-content .sponsor-banners .huggingface {
+  max-width: 70px;
+}

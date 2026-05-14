@@ -3,22 +3,16 @@ title: CTF4Nuclear MSFR
 layout: default
 ---
 
-# A NeurIPS 2026 competition for nuclear scientific ML
+<p class="lead">
+CTF4Nuclear is a NeurIPS 2026 competition for evaluating machine-learning surrogates of nuclear-reactor multiphysics simulations. The first challenge in the series scores models on the <strong>Molten Salt Fast Reactor (MSFR)</strong> — a Generation-IV reactor concept whose liquid-fuel design couples neutronics, thermal-hydraulics, and salt transport in ways that make full-physics simulations expensive. Models are evaluated on twelve standardised experiments covering short- and long-time forecasting, denoising, limited-data, and parametric generalisation; the public leaderboard runs continuously on Hugging Face compute.
+</p>
 
-CTF4Nuclear is a Common Task Framework for evaluating machine-learning
-surrogates of nuclear-reactor multiphysics simulations. The first
-challenge in the series scores models on the **Molten Salt Fast Reactor
-(MSFR)** — a Generation-IV reactor concept whose liquid-fuel design
-couples neutronics, thermal-hydraulics, and salt transport in ways that
-make full-physics simulations expensive. Models are evaluated on twelve
-standardised experiments covering short- and long-time forecasting,
-denoising, limited-data, and parametric generalisation; the public
-leaderboard runs continuously on Hugging Face compute.
-
-[**▶ Live leaderboard**](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard) &nbsp;·&nbsp;
-[**Dataset**](https://huggingface.co/datasets/ctf4science/ctf4nuclear-msfr) &nbsp;·&nbsp;
-[**Starter notebook (Colab)**](https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb) &nbsp;·&nbsp;
-[**`ctf4science` package**](https://github.com/CTF-for-Science/ctf4science)
+<div class="button-row">
+<a href="https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard">▶ Live leaderboard</a>
+<a href="https://huggingface.co/datasets/ctf4science/ctf4nuclear-msfr">Dataset</a>
+<a href="https://huggingface.co/spaces/ctf4science/ctf4nuclear-msfr-leaderboard/blob/main/baselines/baseline_last.ipynb">Starter notebook</a>
+<a href="https://github.com/CTF-for-Science/ctf4science"><code>ctf4science</code> package</a>
+</div>
 
 ## What you'll be modelling
 
@@ -112,12 +106,19 @@ on the leaderboard Space. For email, write to
 [kutz@uw.edu](mailto:kutz@uw.edu) for general questions about the
 competition.
 
-## Organisers
+## Lead organisation and sponsors
 
-This competition is led by the
+<div class="sponsor-banners">
+<a href="https://dynamicsai.org/"><img class="ai-institute" src="assets/ai-institute-banner.png" alt="AI Institute in Dynamic Systems"></a>
+<a href="https://huggingface.co/"><img class="huggingface" src="assets/huggingface-logo.svg" alt="Hugging Face"></a>
+</div>
+
+The CTF4Nuclear competition is led by the
 [AI Institute in Dynamic Systems](https://dynamicsai.org/), with
 co-organisers across the University of Washington, Columbia University,
 Politecnico di Milano, MIT, American University of Beirut, University
-of Cambridge, Autodesk Research, Distyl AI, and SURF. The full
+of Cambridge, Autodesk Research, Distyl AI, and SURF; the full
 organising team is listed in the companion paper.
+**Hugging Face** sponsors all submission-evaluation compute and hosts
+the public leaderboard.
 
